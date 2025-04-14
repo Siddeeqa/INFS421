@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Careers</title>
+    <style>
+        option {
+            padding: 8px;
+            font-weight: 500;
+        }
+        
+        select {
+            color: #374151; 
+            font-weight: 500;
+        }
+        button:hover {
+            background-color: #600018; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-6 text-white-800">Research Career Opportunities</h1>
+        
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">Academic Researcher</h2>
+            <form id="academicForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2 text-lg font-bold text-gray-700">Search Academic Field:</label>
+                    <select name="academicField" class="w-full p-2 border rounded border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-gray-700 font-medium">
+                        <option value="Biology">Biology</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Literature">Literature</option>
+                        <option value="Economics">Economics</option>
+                        <option value="Psychology">Psychology</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 font-bold">
+                    Select 
+                </button>
+            </form>
+        </div>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-green-600">Industry Researcher</h2>
+            <form id="industryForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2 text-lg font-bold text-gray-700">Search Industry Field:</label>
+                    <select name="industryField" class="w-full p-2 border rounded border-green-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-gray-700 font-medium">
+                        <option value="Pharmaceuticals">Pharmaceuticals</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Automotive">Automotive</option>
+                        <option value="Consumer goods">Consumer goods</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 font-bold">
+                    Select
+                </button>
+            </form>
+        </div>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-purple-600">Government Research Scientist</h2>
+            <form id="governmentForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2 text-lg font-bold text-gray-700">Search Government Field:</label>
+                    <select name="governmentField" class="w-full p-2 border rounded border-purple-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-gray-700 font-medium">
+                        <option value="Environmental science">Environmental science</option>
+                        <option value="Public health">Public health</option>
+                        <option value="Education policy">Education policy</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Food safety">Food safety</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 font-bold">
+                    Select
+                </button>
+            </form>
+        </div>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-red-600">Nonprofit Researcher</h2>
+            <form id="nonprofitForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2 text-lg font-bold text-gray-700">Search Nonprofit Field:</label>
+                    <select name="nonprofitField" class="w-full p-2 border rounded border-red-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-gray-700 font-medium">
+                        <option value="Human rights">Human rights</option>
+                        <option value="Public policy">Public policy</option>
+                        <option value="Education Access">Education Access</option>
+                        <option value="Environmental protection">Environmental protection</option>
+                        <option value="Healthcare Access">Healthcare Access</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 font-bold">
+                    Select
+                </button>
+            </form>
+        </div>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4" style="color: #800020;">Independent Researcher</h2>
+            <form id="independentForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2 text-lg font-bold text-gray-700">Search Independent Research Field:</label>
+                    <select name="independentField" class="w-full p-2 border rounded text-gray-700 font-medium" style="border-color: #800020;">
+                        <option value="Market Research">Market Research</option>
+                        <option value="Forensic science">Forensic science</option>
+                        <option value="Data analysis">Data analysis</option>
+                        <option value="Cultural studies">Cultural studies</option>
+                        <option value="Climate Consulting">Climate Consulting</option>
+                    </select>
+                </div>
+                <button type="submit" class="text-white px-6 py-3 rounded-lg font-bold" style="background-color: #800020;">
+                    Select
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const selectedField = this.querySelector('select').value;
+                alert(`You selected: ${selectedField}`);
+            });
+        });
+    </script>
+</body>
+</html>
