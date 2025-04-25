@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Research Guide Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div id="preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Create or Update Your Profile</h2>
+        <form id="profileForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="abstract">Research Abstract:</label>
+            <textarea id="abstract" rows="5" required></textarea>
+
+            <label for="status">Current Status:</label>
+            <select id="status" required>
+                <option value="Student">Student</option>
+                <option value="Researcher">Researcher</option>
+                <option value="Professor">Professor</option>
+            </select>
+
+            <button type="submit">Save Profile</button>
+        </form>
+        <p id="profileMessage" style="color: green;"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Research Guide Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Submission Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div id="preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <h1>Research Submission Form</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Progress Tracker</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form id="submissionForm">
+            <h2>User Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <h2>Research Submission</h2>
+            <label for="research_title">Research Title:</label>
+            <input type="text" id="research_title" required>
+
+            <label for="abstract">Abstract:</label>
+            <textarea id="abstract" rows="4" required></textarea>
+
+            <label for="keywords">Keywords:</label>
+            <input type="text" id="keywords">
+
+            <h2>Process Tracking</h2>
+            <label for="status">Current Status:</label>
+            <select id="status" name="status">
+                <option value="submitted">Submitted</option>
+                <option value="in_review">In Review</option>
+                <option value="accepted">Accepted</option>
+                <option value="rejected">Rejected</option>
+            </select>
+
+            <label for="comments">Comments/Notes:</label>
+            <textarea id="comments" rows="4"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Research Guide Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
