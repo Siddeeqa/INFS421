@@ -12,28 +12,28 @@
             background-color: #f4f4f9;
             color: #f2e9e9;
         }
-
+  
         .container {
             padding: 20px;
         }
         .form-container {
-      .form-container {
-    background: #fff;
+            background: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+        }
+      label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333; /* dark grey */
+}
 
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #333; /* dark grey */
-        }
-        h2 {
-            color: #333; /* dark grey */
-        }
+h2 {
+    color: #333; /* dark grey */
+}
+        
         input, textarea, select {
             width: 100%;
             padding: 8px;
@@ -55,6 +55,7 @@
     </style>
 </head>
 <body>
+
 
     <div class="container">
         <div class="form-container">
@@ -91,14 +92,18 @@
             const status = document.getElementById("status").value;
 
             const responseDiv = document.getElementById("profileResponse");
-            responseDiv.innerHTML = `
+            responseDiv.innerHTML = 
                 <p>Profile saved successfully! Welcome, <strong>${username}</strong>. Your status is: <strong>${status}</strong>.</p>
-            `;
+            ;
         });
 
+       
         function md5(string) {
+           
             return string.split('').reverse().join(''); 
         }
     </script>
 </body>
 </html>
+
+
