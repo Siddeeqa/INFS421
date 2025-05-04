@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            color: #f2e9e9;
+            color: #333; /* Changed to dark grey for better visibility */
         }
   
         .container {
@@ -18,32 +18,34 @@
             background: transparent;
             box-shadow: none;
             border: none;
-            
         }
- .form-container {
-    background: transparent; 
-    border: none;
-    box-shadow: none;
-}
-      label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #333; /* dark grey */
-}
 
-h2 {
-    color: #333; /* dark grey */
-}
+        .form-container {
+            background: transparent; 
+            border: none;
+            box-shadow: none;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333; /* dark grey */
+        }
+
+        h2 {
+            color: #333; /* dark grey */
+        }
         
-  input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #0e0d0d;
-    border-radius: 5px;
-    background-color: transparent; 
-    color: #f2e9e9; 
-}
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #0e0d0d;
+            border-radius: 5px;
+            background-color: transparent; 
+            color: #f2e9e9; 
+        }
+
         button {
             background-color: #0074D9;
             color: white;
@@ -52,13 +54,13 @@ h2 {
             border-radius: 5px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #0056a3;
         }
     </style>
 </head>
 <body>
-
 
     <div class="container">
         <div class="form-container">
@@ -96,17 +98,13 @@ h2 {
 
             const responseDiv = document.getElementById("profileResponse");
             responseDiv.innerHTML = 
-                <p>Profile saved successfully! Welcome, <strong>${username}</strong>. Your status is: <strong>${status}</strong>.</p>
-            ;
+                `<p>Profile saved successfully! Welcome, <strong>${username}</strong>. Your status is: <strong>${status}</strong>.</p>`;
         });
 
-       
         function md5(string) {
-           
+            // Placeholder for actual MD5 hashing
             return string.split('').reverse().join(''); 
         }
     </script>
 </body>
 </html>
-
-
