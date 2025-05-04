@@ -1,9 +1,6 @@
-// Preloader
-window.onload = function() {
-    document.getElementById("preloader").style.display = "none";
-};
 
-// Profile Form Submission
+
+
 document.getElementById("profileForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
@@ -11,12 +8,12 @@ document.getElementById("profileForm").addEventListener("submit", function(event
     const abstract = document.getElementById("abstract").value;
     const status = document.getElementById("status").value;
 
-    // Simulate saving profile data
+
     console.log("Profile saved:", { username, password, abstract, status });
     document.getElementById("profileMessage").textContent = "Profile saved successfully!";
 });
 
-// Appointment Form Submission
+
 document.getElementById("appointmentForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const appointmentName = document.getElementById("name").value;
@@ -24,12 +21,12 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     const appointmentDay = document.getElementById("day").value;
     const appointmentTime = document.getElementById("time").value;
 
-    // Simulate saving appointment data
+ 
     console.log("Appointment booked:", { appointmentName, appointmentEmail, appointmentDay, appointmentTime });
     document.getElementById("appointmentMessage").textContent = "Appointment booked successfully!";
 });
 
-// Submission Form Handling
+
 document.getElementById("submissionForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -38,6 +35,6 @@ document.getElementById("submissionForm").addEventListener("submit", function(ev
     const abstract = document.getElementById("abstract").value;
     const keywords = document.getElementById("keywords").value;
 
-    // Simulate saving submission data
+ 
     console.log("Submission received:", { name, email, researchTitle, abstract, keywords });
 });
