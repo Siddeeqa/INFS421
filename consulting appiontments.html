@@ -3,34 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Consulting Appointments</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #0074D9;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
+            padding: 20px;
         }
         .container {
-            padding: 20px;
             max-width: 600px;
             margin: 0 auto;
-            background: #fff;
+            background: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
         }
         label {
             display: block;
             margin: 10px 0 5px;
         }
-        input, textarea {
+        input, select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -48,57 +41,56 @@
         button:hover {
             background-color: #005bb5;
         }
-        footer {
-            text-align: center;
-            padding: 10px 20px;
-            background-color: #0074D9;
-            color: white;
+        .message {
             margin-top: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-
     <div class="container">
-        <form id="contactForm">
+        <h1>Book a Consulting Appointment</h1>
+        <form id="appointmentForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="day">Day:</label>
+            <select id="day" name="day" required>
+                <option value="">Select a day</option>
+                <option>Sunday</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+            </select>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
 
             <button type="submit">Submit</button>
         </form>
-
-        <div id="response" style="margin-top: 20px;"></div>
+        <div id="responseMessage" class="message"></div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Contact Us Page</p>
-    </footer>
-
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
             event.preventDefault();
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
+            const day = document.getElementById("day").value;
+            const time = document.getElementById("time").value;
+            const responseMessage = document.getElementById("responseMessage");
 
-            const nameLength = name.length;
-            const emailLowercase = email.toLowerCase();
-
-            const responseDiv = document.getElementById("response");
-            responseDiv.innerHTML = `
-                <p>Thank you, <strong>${name}</strong>, for reaching out!</p>
-                <p>Your email address in lowercase is: <strong>${emailLowercase}</strong></p>
-                <p>Your message has been received. (Name length: ${nameLength} characters)</p>
-            `;
+            if (!name || !email || !day || !time) {
+                responseMessage.innerHTML = "Missing data: Please fill in all fields.";
+            } else {
+                responseMessage.innerHTML = `Your appointment on ${day} at ${time} is booked successfully.`;
+            }
         });
     </script>
 </body>

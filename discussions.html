@@ -3,51 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Discussion Platforms</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title><b>Research Discussion Platforms</b></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #white;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .box {
+            background-color: grey;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            text:bold;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #white;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #navy;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div id="preloader" class="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <header>
-        <h1>Research Discussion Platforms</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <h1><b>Research Discussion Platforms</b></h1>
     <div class="container">
         <div class="box">
-            <h2>ResearchGate</h2>
+            <h2><b>ResearchGate</b></h2>
             <p>Find research in your field, network with researchers, and share your work.</p>
             <a href="https://www.researchgate.net" target="_blank">Visit ResearchGate</a>
         </div>
         <div class="box">
-            <h2>Academia.edu</h2>
+            <h2><b>Academia.edu</b></h2>
             <p>Interact with other scholars and share your research papers.</p>
             <a href="https://www.academia.edu" target="_blank">Visit Academia.edu</a>
         </div>
         <div class="box">
-            <h2>Mendeley</h2>
+            <h2><b>Mendeley</b></h2>
             <p>An academic social network and reference manager to plan research.</p>
             <a href="https://www.mendeley.com" target="_blank">Visit Mendeley</a>
         </div>
         <div class="box">
-            <h2>Google Scholar</h2>
+            <h2><b>Google Scholar</b></h2>
             <p>Look for academic publications and get in touch with writers in your area of expertise.</p>
             <a href="https://scholar.google.com" target="_blank">Visit Google Scholar</a>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Research Guide Hub. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>

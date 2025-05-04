@@ -1,4 +1,7 @@
 
+window.onload = function() {
+    document.getElementById("preloader").style.display = "none";
+};
 
 
 document.getElementById("profileForm").addEventListener("submit", function(event) {
@@ -8,7 +11,7 @@ document.getElementById("profileForm").addEventListener("submit", function(event
     const abstract = document.getElementById("abstract").value;
     const status = document.getElementById("status").value;
 
-
+   
     console.log("Profile saved:", { username, password, abstract, status });
     document.getElementById("profileMessage").textContent = "Profile saved successfully!";
 });
@@ -21,7 +24,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     const appointmentDay = document.getElementById("day").value;
     const appointmentTime = document.getElementById("time").value;
 
- 
+   
     console.log("Appointment booked:", { appointmentName, appointmentEmail, appointmentDay, appointmentTime });
     document.getElementById("appointmentMessage").textContent = "Appointment booked successfully!";
 });
@@ -35,6 +38,7 @@ document.getElementById("submissionForm").addEventListener("submit", function(ev
     const abstract = document.getElementById("abstract").value;
     const keywords = document.getElementById("keywords").value;
 
- 
+   
     console.log("Submission received:", { name, email, researchTitle, abstract, keywords });
 });
+

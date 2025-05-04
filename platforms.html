@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful Platforms for Research</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #f1eaea;
+        }
+        header {
+            background-color: #0074D9;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .platform {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(238, 237, 237, 0.1);
+        }
+        .platform h3 {
+            color: #0074D9;
+        }
+        .platform a {
+            text-decoration: none;
+            color: #0074D9;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #0074D9;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Useful Platforms for Research</h1>
+    </header>
+
+    <div class="container">
+        <div id="platformsList"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Research Platforms</p>
+    </footer>
+
+    <script>
+        const platforms = [
+            { name: "Google Scholar", link: "https://scholar.google.com" },
+            { name: "ResearchGate", link: "https://www.researchgate.net" },
+            { name: "Academia.edu", link: "https://www.academia.edu" },
+            { name: "PubMed", link: "https://pubmed.ncbi.nlm.nih.gov" },
+            { name: "IEEE Xplore", link: "https://ieeexplore.ieee.org" }
+        ];
+
+        const platformsList = document.getElementById("platformsList");
+
+        platforms.forEach(platform => {
+            const platformHTML = `
+                <div class="platform">
+                    <h3><a href="${platform.link}" target="_blank">${platform.name}</a></h3>
+                    <p>Explore more about <em>${platform.name}</em> to enhance your research work!</p>
+                </div>
+            `;
+            platformsList.innerHTML += platformHTML;
+        });
+    </script>
+</body>
+</html>

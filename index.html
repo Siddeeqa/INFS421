@@ -5,35 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Guide Hub</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div id="preloader" class="preloader">
-        <div class="loader"></div>
+    <div class="content">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold uppercase tracking-wide mb-3">Research Guide Hub</h1>
+                <br><br>
+                <h2 class="text-md uppercase mb-10">Empowering Discovery: Uncover Insights, Drive Changes, Advance Knowledge</h2>
+                <br><br>
+            </div>
+            <nav class="bg-gray-800 text-white p-4">
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="nav-link" data-page="login">Login</a>
+                    <a href="#" class="nav-link" data-page="home">Home</a>
+                    <a href="#" class="nav-link" data-page="careers">Available Careers</a>
+                   
+                    <a href="#" class="nav-link" data-page="tracker">Progress Tracker</a>
+                    <a href="#" class="nav-link" data-page="discussions">Discussions</a>
+                    <a href="#" class="nav-link" data-page="ai">Helpful AI Tools</a>
+                 
+                    <a href="#" class="nav-link" data-page="profile">My Profile</a>
+                    <a href="#" class="nav-link" data-page="contact">Contact Us</a>
+                </div>
+            </nav>
+            <div class="container mx-auto p-8" id="pageContent">
+             
+            </div>
+        </div>
     </div>
 
-    <header>
-        <h1>Research Guide Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="profile.html">My Profile</a></li>
-                <li><a href="careers.html">Available Careers</a></li>
-                <li><a href="appointments.html">Consulting Appointments</a></li>
-                <li><a href="platforms.html">Platforms</a></li>
-                <li><a href="AI_Tools.html">Helpful AI Tools</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <script>
+        const pages = {
+            login: 'login.html',
+            home: 'home.html',
+            careers: 'Available careers.html',
+          
+            tracker: 'progress tracker.html',
+            discussions: 'discussions.html',
+            ai: 'helpful AI tools.html',
+          
+            profile: 'profile.html',
+            contact: 'contact us.html'
+        };
 
-    <div class="container">
-        <h2>Empowering Discovery: Uncover Insights, Drive Changes, Advance Knowledge</h2>
-    </div>
+        function loadPage(page) {
+            const pageContent = document.getElementById("pageContent");
+            fetch(pages[page])
+                .then(response => response.text())
+                .then(data => {
+                    pageContent.innerHTML = data;
+                })
+                .catch(error => {
+                    pageContent.innerHTML = `<p>Error loading page: ${error}</p>`;
+                });
+        }
 
-    <footer>
-        <p>&copy; 2024 Research Guide Hub. All Rights Reserved.</p>
-    </footer>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const page = this.getAttribute('data-page');
+                loadPage(page);
+            });
+        });
+
+       
+        loadPage('login');
+    </script>
 </body>
 </html>

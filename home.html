@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Research Guide Hub</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div id="preloader" class="preloader">
-        <div class="loader"></div>
+    <div class="container text-center mt-8">
+        <p class="text">
+            <b>
+                At Research Guide Hub, we specialize in delivering high-quality research consulting services designed to empower organizations,
+                academic institutions, and professionals. With a focus on data-driven insights and innovative solutions, our team is dedicated
+                to helping you achieve your research goals efficiently and effectively. From concept development to data analysis and report
+                preparation, we offer tailored support every step of the way. Discover how our expertise can elevate your research journey.
+            </b>
+        </p>
+        <br><br>
+        <div id="researchFields"></div>
     </div>
 
-    <header>
-        <h1>Welcome to Research Guide Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <script>
+        const AcademicResearcher = ["Biology", "Physics", "Literature", "Economics", "Psychology"];
+        const IndustryResearcher = ["Pharmaceuticals", "Technology", "Agriculture", "Automotive", "Consumer goods"];
+        const GovernmentResearchScientist = ["Environmental science", "Public health", "Education policy", "Energy", "Food safety"];
+        const NonprofitResearcher = ["Human rights", "Public policy", "Education Access", "Environmental protection", "Healthcare Access"];
+        const IndependentResearcher = ["Market Research", "Forensic science", "Data analysis", "Cultural studies", "Climate Consulting"];
 
-    <div class="container">
-        <p>At Research Guide Hub, we specialize in delivering high-quality research consulting services designed to empower organizations, academic institutions, and professionals.</p>
-    </div>
+        const allResearchers = [
+            ...AcademicResearcher,
+            ...IndustryResearcher,
+            ...GovernmentResearchScientist,
+            ...NonprofitResearcher,
+            ...IndependentResearcher
+        ];
 
-    <footer>
-        <p>&copy; 2024 Research Guide Hub. All Rights Reserved.</p>
-    </footer>
+        const totalCount = allResearchers.length;
+        const allResearchersString = allResearchers.join(', ');
+
+        document.getElementById("researchFields").innerHTML = `<p><b>There are a total of ${totalCount} research fields: ${allResearchersString}.</b></p>`;
+    </script>
 </body>
 </html>
