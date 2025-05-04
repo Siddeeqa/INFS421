@@ -5,13 +5,10 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-    color: white;
-    background: url('background.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 .header {

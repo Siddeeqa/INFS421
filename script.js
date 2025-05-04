@@ -1,4 +1,7 @@
 
+window.onload = function() {
+    document.getElementById("preloader").style.display = "none";
+};
 
 
 document.getElementById("profileForm").addEventListener("submit", function(event) {
